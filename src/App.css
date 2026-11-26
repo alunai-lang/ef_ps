@@ -1,44 +1,121 @@
 
 .estilo {
-  box-sizing: border-box;
   width: 100%;
   max-width: 680px;
-  margin: 0 auto;
-  padding: 24px clamp(16px, 4vw, 32px);
+  margin: clamp(24px, 7vh, 64px) auto;
+  padding: clamp(20px, 5vw, 36px);
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
 }
 
 .estilo h1 {
+  margin: 0 0 28px;
+  color: #0f172a;
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  letter-spacing: -0.04em;
   text-align: center;
 }
 
 .estilo fieldset {
-  margin: 24px 0;
-  padding: 20px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .estilo fieldset label {
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .estilo fieldset label p {
-  margin: 0 0 6px;
+  margin: 0 0 8px;
+  color: #334155;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.estilo fieldset > p {
+  margin: 0 0 8px;
+  color: #334155;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .estilo fieldset input,
 .estilo fieldset select {
-  box-sizing: border-box;
   width: 100%;
+  min-height: 46px;
   padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffff;
+  color: #0f172a;
+  font: inherit;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.estilo fieldset input::placeholder {
+  color: #94a3b8;
+}
+
+.estilo fieldset input:focus,
+.estilo fieldset select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.14);
 }
 
 .estilo button {
   display: block;
-  margin: 16px auto 0;
+  width: 100%;
+  min-height: 48px;
+  margin: 24px auto 0;
+  border: 0;
+  border-radius: 10px;
+  background: #4f46e5;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.estilo button:not(:disabled):hover {
+  transform: translateY(-1px);
+  background: #4338ca;
+}
+
+.estilo button:focus-visible {
+  outline: 3px solid rgba(79, 70, 229, 0.3);
+  outline-offset: 3px;
+}
+
+.estilo button:disabled {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
+
+.estilo > div {
+  margin-bottom: 24px;
+  padding: 16px;
+  border: 1px solid #a7f3d0;
+  border-radius: 12px;
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.estilo form > div {
+  margin-top: 16px;
+  color: #b45309;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 480px) {
-  .estilo fieldset {
-    padding: 16px;
+  .estilo {
+    width: calc(100% - 24px);
+    border-radius: 16px;
   }
 }

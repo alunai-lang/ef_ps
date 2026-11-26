@@ -166,22 +166,22 @@ alert("Por favor seleccione la Categoría")
       <form onSubmit={handleSubmit}>
         <fieldset>
           <label>
-            <p style={{ fontWeight: 'bold', color: 'blue' } } >Código (mínimo 5 caracteres)</p>
+            <p>Código (mínimo 5 caracteres)</p>
             <input name="code" value={inputValue1} onChange={handleChange1} minLength={5} placeholder="Ingrese código" /> {/* placeholder="Ingrese como mínimo 5 caracteres"  */}
           </label>
            
            <label>
-            <p style={{ fontWeight: 'bold', color: 'blue' } } >Nombre de producto</p>
+            <p>Nombre de producto</p>
             <input name="nom" value={inputValue2} onChange={handleChange2} minLength={2} placeholder="Ingrese nombre" /> {/* placeholder="Ingrese como mínimo 2 caracteres" */}
           </label>
 
            <label>
-            <p style={{ fontWeight: 'bold', color: 'blue' } } >Descripción</p>
+            <p>Descripción</p>
             <input name="nom" value={inputValueD} onChange={handleChangeD} minLength={2} placeholder="Ingrese descripción" /> {/* placeholder="Ingrese como mínimo 2 caracteres" */}
           </label>
 
          <label>
-            <p style={{ fontWeight: 'bold', color: 'blue' } } >Stock</p>
+            <p>Stock</p>
             <input
               type="number"
               min="0" // Minimum allowed value
@@ -194,7 +194,7 @@ alert("Por favor seleccione la Categoría")
             
 
             {/* <label htmlFor="fruit-select">Choose a fruit:</label> */}
-             <p style={{ fontWeight: 'bold', color: 'blue' } } >Categoría</p>
+             <p>Categoría</p>
       <select id="fruit-select" value={selectedFruit} onChange={handleChange}>
         {distribuidores.map((fruit) => (
           <option key={fruit.id} value={fruit.id}>
@@ -211,7 +211,7 @@ alert("Por favor seleccione la Categoría")
        }
 
         <button disabled={isButtonDisabled}
-        style={{ fontWeight: 'bold', color: 'blue' } } type="submit">Enviar</button>
+        type="submit">Enviar</button>
       </form>
 
 
