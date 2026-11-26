@@ -1,8 +1,44 @@
 
 .estilo {
-  padding: 5px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px clamp(16px, 4vw, 32px);
+}
+
+.estilo h1 {
+  text-align: center;
 }
 
 .estilo fieldset {
-  margin: 60px 0;
+  margin: 24px 0;
+  padding: 20px;
+}
+
+.estilo fieldset label {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.estilo fieldset label p {
+  margin: 0 0 6px;
+}
+
+.estilo fieldset input,
+.estilo fieldset select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 12px;
+}
+
+.estilo button {
+  display: block;
+  margin: 16px auto 0;
+}
+
+@media (max-width: 480px) {
+  .estilo fieldset {
+    padding: 16px;
+  }
 }
