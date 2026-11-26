@@ -19,17 +19,9 @@ const formReducer = (state, event) => {
   ];
 function App() {
 
-  const [email, setEmail] = useState('');
-  const [isValid, setIsValid] = useState(true);
-
-  const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
-
-
-
   const [formData1, setFormData1] = useReducer(formReducer, {});
   const [formData2, setFormData2] = useReducer(formReducer, {});
     const [formData3, setFormData3] = useReducer(formReducer, {});
-    const [formData4, setFormData4] = useReducer(formReducer, {});   
          const [formData5, setFormData5] = useReducer(formReducer, {});
 
              const [formDataD, setFormDataD] = useReducer(formReducer, {});
@@ -38,7 +30,6 @@ function App() {
   const [inputValue1, setInputValue1] = useState('');
 const [inputValue2, setInputValue2] = useState('');
 const [inputValue3, setInputValue3] = useState('');
-const [inputValue4, setInputValue4] = useState('');
 const [inputValueD, setInputValueD] = useState('');
 
  const [selectedFruit, setSelectedFruit] = useState('Select'); // Initial value
@@ -82,9 +73,7 @@ alert("Por favor seleccione la Categoría")
            setInputValue1('');
            setInputValue2('');
             setInputValue3('');
-             setInputValue4('');
              setInputValueD('');
-            setEmail('');
              setSelectedFruit('Select');
           
         }, 5000);
@@ -133,14 +122,6 @@ alert("Por favor seleccione la Categoría")
     });
   }
 
-     /*    const handleChange4= event => {
-       setInputValue4(event.target.value);
-  setFormData4({
-      name: event.target.name,
-      value: event.target.value,
-    }); 
-  }*/
-//!inputValue1 ||  !inputValue2 || !inputValue3 || !inputValue4 ;
   //const isButtonDisabled  =false ;
   const isButtonDisabled  = !inputValue1 ||  !inputValue2 || !inputValueD  || !inputValue3  ;
 
@@ -223,15 +204,6 @@ alert("Por favor seleccione la Categoría")
       </select>
       {/* <p>You selected: {selectedFruit}</p> */}
 
-       {/* <label>
-        <p style={{ fontWeight: 'bold', color: 'blue' } }  >Email</p>
-        <input
-          type="email" 
-         value={inputValue5}
-          onChange={handleChange5}
-        />
-       </label> */}
- 
         </fieldset>
 
           {isButtonDisabled &&
